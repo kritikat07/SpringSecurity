@@ -1,4 +1,4 @@
-package com.kritika.SpringSecurity;
+package com.kritika.SpringSecurity.model;
 
 public class student {
     private int id;

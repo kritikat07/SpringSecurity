@@ -1,10 +1,10 @@
-package com.kritika.SpringSecurity;
+package com.kritika.SpringSecurity.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class controller {
+public class Hellocontroller {
     @GetMapping("/")
     public String greet(){
         return "welcome kritika";

@@ -1,5 +1,6 @@
-package com.kritika.SpringSecurity;
+package com.kritika.SpringSecurity.controller;
 
+import com.kritika.SpringSecurity.model.student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
