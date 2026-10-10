@@ -3,7 +3,11 @@ package com.kritika.SpringSecurity.service;
 import com.kritika.SpringSecurity.model.UserPrincipal;
 import com.kritika.SpringSecurity.model.users;
 import com.kritika.SpringSecurity.repo.UserRepo;
+import org.apache.catalina.Authenticator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,4 +30,5 @@ public class Myuserdetailsservices implements UserDetailsService {
 
         return new UserPrincipal(user);
     }
+
 }

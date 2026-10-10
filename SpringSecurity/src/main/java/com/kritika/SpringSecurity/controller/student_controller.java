@@ -1,9 +1,16 @@
 package com.kritika.SpringSecurity.controller;
 
 import com.kritika.SpringSecurity.model.student;
+import com.kritika.SpringSecurity.model.users;
+import com.kritika.SpringSecurity.service.Myuserdetailsservices;
+import com.kritika.SpringSecurity.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +28,16 @@ public class student_controller {
 @GetMapping(value = "/student")
     public List<student> getStudents(){
       return students;
+    }
+    private final UserService service;
+
+    public student_controller(UserService service) {
+        this.service = service;
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody users user) {
+        return service.verify(user);
     }
 
 
